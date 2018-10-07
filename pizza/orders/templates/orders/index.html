@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+    </head>
+    <body>
+
+        {% if message %}
+            {{ message }}
+        {% endif %}
+
+        {% if user %}
+            <h2>Hello, {{ user.first_name }}!</h2>
+            Click <a href="{% url 'logout' %}">here</a> to log out.
+        {% endif %}
+
+    </body>
+</html>
