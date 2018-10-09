@@ -1,0 +1,9 @@
+{% extends 'orders/base.html' %}
+
+{% block body %}
+    {% if message %}
+        {{ message }}, {{ user }}!
+    {% endif %}
+
+    <br>Click <a href="{% url 'index' %}">here</a> to login!
+{% endblock %}

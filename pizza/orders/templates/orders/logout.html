@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Logged out</title>
-    </head>
-    <body>
+{% extends 'orders/base.html' %}
+
+{% block body %}
+
         You have been logged out {{ user.first_name }}
         <br>Click <a href="{% url 'index' %}">here</a> to login again.
     </body>
 </html>
+
+{% endblock %}

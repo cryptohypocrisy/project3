@@ -1,0 +1,18 @@
+.login {
+    position: absolute;
+    top: 15%;
+    right: 60%;
+    text-align: center;
+}
+
+.signup {
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    text-align: center;
+}
+
+.pad-form {
+    padding: 5px;
+    margin: 2px;
+}

@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
+{% extends 'orders/base.html' %}
 
-        {% if message %}
-            {{ message }}
-        {% endif %}
+{% block body %}
+    {% if message %}
+        {{ message }}
+    {% endif %}
 
-        <form class="" action="{% url 'login' %}" method="post">
-            {% csrf_token %}
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
-            <input type="submit" value="Log in!">
-        </form>
-    </body>
-</html>
+        <div class="login">
+            <h3>Log In</h3>
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input class="pad-form" type="text" name="login-username" placeholder="Username">
+                <br><input class="pad-form" type="password" name="login-password" placeholder="Password">
+                <br><input class="pad-form" type="submit" value="Log in!">
+            </form>
+        </div>
+        <div class="signup">
+            <h3>Sign Up</h3>
+            <form action="{% url 'signup' %}" method="post">
+                {% csrf_token %}
+                <input class="pad-form" type="text" name="signup-first_name" placeholder="First Name">
+                <br><input class="pad-form" type="text" name="signup-last_name" placeholder="Last Name">
+                <br><input class="pad-form" type="email" name="signup-email" placeholder="Email Address">
+                <br><input class="pad-form" type="password" name="signup-password" placeholder="Password">
+                <br><input class="pad-form" type="submit" value="Sign up!">
+            </form>
+        </div>
+
+{% endblock %}
